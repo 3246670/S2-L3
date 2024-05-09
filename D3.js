@@ -112,7 +112,10 @@ const starWarsCharacters = [
     Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
   */
 for (let index = 0; index < starWarsCharacters.length; index++) {
-    charactersNames .push ( starWarsCharacters[index].name);
+    const current= starWarsCharacters [index]
+    console.log(current)
+    console.log(starWarsCharacters[index])
+    charactersNames.push ( current.name);
     console.log(charactersNames)
     
 }
@@ -126,7 +129,8 @@ const femaleCharacters =[];
                 femaleCharacters.push(starWarsCharacters[index]);
             }
         }
-console.log(femaleCharacters);
+            console.log(femaleCharacters);
+        
   /* ESERCIZIO 4
     Crea un oggetto "eyeColor" che abbia le seguenti proprietà: blue, yellow, brown, red, blue-gray.
     Ad ognuna di queste proprietà assegna come valore un array vuoto.
@@ -172,6 +176,7 @@ console.log(femaleCharacters);
  while (i < starWarsCharacters.length) {
     crewMass += starWarsCharacters[i].mass;
     i++;
+    console.log("la massa totale è.",crewMass)
     
  }
  console.log("massa totale dell'equipaggio"+ crewMass) 
@@ -208,12 +213,13 @@ console.log("ship is half loaded");
   */
  for (let index = 0; index < starWarsCharacters.length; index++) {
      if (starWarsCharacters[index].gender === "n/a") {
-        starWarsCharacters[index].gender === "robot";
+        starWarsCharacters[index].gender = "robot";
         
      }
     
  }
-  console.log(starWarsCharacters)
+     console.log(starWarsCharacters);
+ 
   /* --EXTRA-- ESERCIZIO 9
     Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
     Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
